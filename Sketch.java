@@ -9,7 +9,8 @@ public class Sketch extends PApplet {
 
   // Sets the size of the window
   public void settings() {
-    size(600, 600);
+    size(300, 300);
+
   }
 
   /**
@@ -23,20 +24,23 @@ public class Sketch extends PApplet {
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
+    // Converts width and height to float
+    float fltWidth = (float) (width);
+    float fltHeight = (float) (height);
 
 	  // Creates rectangle (remote control antenna)
     stroke(255);
-    rect(295, 225, 30, 200);
+    rect((fltWidth / 2.033898305f), (fltHeight / 2.666666667f), (fltWidth / 20f), (fltHeight / 3f));
 
     // Creates rectangle (remote control)
     stroke(255);
-    square(200, 350, 220);
+    square((fltWidth / 3f), (fltHeight / 1.714285714f), fltWidth / 2.72727272727272727272727272f);
     fill(0, 0, 0);
 
     // Creates circle (remote control button)
     stroke(255);
     fill(255, 0, 0);
-    ellipse(310, 460, 150, 150);
+    ellipse((fltWidth / 1.935483871f) , (fltHeight / 1.304347826f), (fltWidth / 4f), (fltHeight / 4f));
 
   }
 }
